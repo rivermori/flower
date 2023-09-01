@@ -580,7 +580,7 @@ footer iframe{
         order: 2;
     }
     footer{
-        padding:3vw 2vw 20vw;
+        padding:3vw 2vw 12vw;
         font-size: 1.2vw;
         text-align: center;
         background-color: #FFAFA3;
@@ -618,7 +618,7 @@ footer iframe{
         display: block;
         position: fixed;
         width: 90vw;
-        bottom:10vw;
+        bottom:2vw;
         left:5vw;
         z-index: 5;
     }    
