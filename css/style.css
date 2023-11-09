@@ -1,0 +1,59 @@
+        /*　全体のおおまかな箱*/
+        .container{
+            margin:0 auto;
+            max-width:1500px;
+            overflow: hidden;
+        }
+        .top{
+            text-align: center;
+            margin:0 auto min(50 / 750 * 100vw,50px);
+        }
+        .item{
+            display:flex;
+            justify-content: center;
+        }
+
+        .item_parent{
+            margin:0 auto;
+            width:min(370 / 750 * 100vw,370px);
+        }
+
+        .item_photo{
+            display:flex;
+            margin:0 auto;
+        }
+        .item_photo img{
+            display:block;
+            object-fit: contain;
+            height: min(200 / 750 * 100vw,200px);
+        }
+
+        /* リストのスタイル */
+        .text_list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 各リストアイテムのスタイル */
+        .text_list_item {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            margin-bottom: min(10 / 750 * 100vw,10px);
+            padding: min(10 / 750 * 100vw,10px);
+            overflow-wrap: break-all;
+        }
+
+        /* タイトルのスタイル */
+        .text_list_title {
+            font-size: min(18 / 750 * 100vw,18px);
+            font-weight: bold;
+            margin-bottom: min(5 / 750 * 100vw,5px);
+        }
+
+        /* 情報のスタイル */
+        .text_list_info {
+            font-size: min(14 / 750 * 100vw, 14px);
+        }
+
+        
