@@ -1,25 +1,44 @@
         /*　全体のおおまかな箱*/
         .container{
             margin:0 auto;
-            max-width:1500px;
+            max-width:750px;
             overflow: hidden;
         }
         .top{
             text-align: center;
-            margin:0 auto min(50 / 750 * 100vw,50px);
+            margin:min(50 / 750 * 100vw,50px) auto min(50 / 750 * 100vw,50px);
         }
         .item{
             display:flex;
+            gap:min(20 / 750 * 100vw,20px);
             justify-content: center;
+            margin-bottom: min(50 / 750 * 100vw, 50px);
         }
 
         .item_parent{
             margin:0 auto;
-            width:min(370 / 750 * 100vw,370px);
+            width:min(700 / 750 * 100vw,700px);
+        }
+
+        @media screen and (max-width:750px) {
+            .item{
+                flex-flow: column;
+            }
+            .item_parent{
+                margin:0 auto;
+            }    
+        }
+
+        .item_title{
+            text-align: center;
+            font-size: min(24 / 750 * 100vw, 24px);
+            font-weight: bold;
+            line-height: 2.0;
         }
 
         .item_photo{
             display:flex;
+            justify-content: center;
             margin:0 auto;
         }
         .item_photo img{
@@ -30,15 +49,15 @@
 
         /* リストのスタイル */
         .text_list {
+            width:min(350 / 750 * 100vw,350px);
             list-style: none;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
         }
 
         /* 各リストアイテムのスタイル */
         .text_list_item {
-            background-color: #f2f2f2;
-            border: 1px solid #ccc;
+            background-color: #fffff9;
             margin-bottom: min(10 / 750 * 100vw,10px);
             padding: min(10 / 750 * 100vw,10px);
             overflow-wrap: break-all;
@@ -56,4 +75,10 @@
             font-size: min(14 / 750 * 100vw, 14px);
         }
 
-        
+        .green{
+            background-color: #a7c6c8;
+        }
+
+        .pink{
+            background-color: #f2d4e3;
+        }
