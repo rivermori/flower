@@ -1,0 +1,230 @@
+        img{
+            width:100%;
+        }
+        /*　全体のおおまかな箱*/
+        .container{
+            margin:0 auto;
+            overflow: hidden;
+            font-family: 'DotGothic16', sans-serif;
+            font-weight: bold;
+            background-color: #cdbea7;
+            color:#323030;
+        }
+        /*FVを作ろう*/
+        .top{
+            position:relative;
+            height:100vh;
+            margin:0 auto;
+            text-align: center;
+        }
+        .top_bg{
+            background: linear-gradient(90deg,#cdbea7 0%, #cdbea7 70%, #C29545 50%, #C29545 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ttl_inner{
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            width:calc(350 / 750 * 100vw);
+        }
+        .ttl_inner .photo{
+            display: flex;
+            position: relative;
+            height:calc(210 / 750 * 100vw);
+            justify-self: center;
+            align-items: center;
+        }
+        .ttl_inner .photo::after{
+            position: absolute;
+            content: "";
+            background-color: #323030;
+            width:calc(250 / 750 * 100vw);
+            height: calc(188 / 750 * 100vw);
+            transform: rotate(-10deg);
+            z-index: -2;
+        }
+        .ttl_inner .photo img{
+            width:calc(250 / 750 * 100vw);
+            padding:calc(8 / 750 * 100vw);
+            background-color: #FFFFFF;
+            z-index: 0;
+        }
+        .ttl {
+            position: relative;
+            margin-right: calc(50 / 750 * 100vw);
+            padding: calc(50 / 750 * 100vw) calc(50 / 750 * 100vw);
+            text-align: center;
+            font-size: calc(48 / 750 * 100vw);
+            font-family: 'Protest Riot', sans-serif;
+        }
+        .ttl:before, .ttl:after {
+            position: absolute;
+            content: '';
+        }
+         /*上の指定*/
+        .ttl:after { 
+            top: 0;
+            left: 0;
+            width: calc(30 / 750 * 100vw);
+            height: calc(30 / 750 * 100vw);
+            border-top: calc(3 / 750 * 100vw) solid #323030;
+            border-left: calc(3 / 750 * 100vw) solid #323030;
+        }
+         /*下の指定*/
+        .ttl:before { 
+            right: 0;
+            bottom: 0;
+            width: calc(30 / 750 * 100vw);
+            height: calc(30 / 750 * 100vw);
+            border-right: calc(3 / 750 * 100vw) solid #323030;
+            border-bottom: calc(3 / 750 * 100vw) solid #323030;
+        }
+        
+
+        @media screen and (max-width:750px) {
+            .item{
+                width:90%;
+                margin:0 auto calc(20 / 750 * 100vw);
+                padding-top: calc(50 / 750 * 100vw);    
+            }
+            .text_list_item{
+                margin-bottom: calc(10 / 750 * 100vw);    
+            }
+            .item_parent{
+                width: 80%;
+                margin:0 auto calc(20 / 750 * 100vw);
+            }
+            .item_photo{
+                margin: 0 auto calc(20 / 750 * 100vw);
+            }
+            .item_photo img{
+                object-fit: contain;
+                width:calc(350 / 750 * 100vw);
+            }        
+        }
+
+        @media screen and (min-width:751px) {
+            .item{
+                display: flex;
+                gap:10%;
+                width:85%;
+                margin:0 auto calc(20 / 750 * 100vw);
+                padding-top: calc(50 / 750 * 100vw);
+            }
+            .item_parent{
+                width: 70%;
+                margin:0 auto calc(30 / 750 * 100vw);
+
+            }    
+            .text_list_item{
+                margin-bottom: calc(5 / 750 * 100vw);
+            }
+            .item_photo{
+                margin: 0 auto calc(10 / 750 * 100vw);
+            }  
+            .item_photo img{
+                object-fit: contain;
+                width:calc(170 / 750 * 100vw);
+                height: calc(100 / 750 * 100vw);
+            }          
+        }
+
+        .item_parent{
+            position: relative;
+            margin:0 auto calc(20 / 750 * 100vw);
+            padding: calc(10 / 750 * 100vw);
+            background-color: #C29545;
+            border-radius: calc(12 / 750 * 100vw);
+        }
+        .item_parent:before, .item_parent:after {
+            position: absolute;
+            content: '';
+        }
+         /*上の指定*/
+        .item_parent:after { 
+            top: 2%;
+            left: 2%;
+            width: calc(30 / 750 * 100vw);
+            height: calc(30 / 750 * 100vw);
+            border-top: calc(3 / 750 * 100vw) solid #323030;
+            border-left: calc(3 / 750 * 100vw) solid #882426;
+        }
+         /*下の指定*/
+        .item_parent:before { 
+            right: 2%;
+            bottom: 2%;
+            width: calc(30 / 750 * 100vw);
+            height: calc(30 / 750 * 100vw);
+            border-right: calc(3 / 750 * 100vw) solid #882426;
+            border-bottom: calc(3 / 750 * 100vw) solid #323030;
+        }
+
+        .item_set{
+            display:flex;
+            flex-wrap:wrap;
+            width:90%;
+            margin:0 auto;
+        }
+        .item_title{
+            text-align: center;
+            font-size: calc(18 / 750 * 100vw);
+            font-weight: bold;
+            padding-top:calc(8 / 750 * 100vw);
+            padding-bottom:calc(8 / 750 * 100vw);
+        }
+
+        /* リストのスタイル */
+        .text_list {
+            width:90%;
+            list-style: none;
+            margin: 0 auto;
+            padding:0;
+        }
+
+        /* 各リストアイテムのスタイル */
+        .text_list_item {
+            background-color: #fffff9;
+            padding: calc(8 / 750 * 100vw);
+            overflow-wrap: break-all;
+            border-radius: calc(12 / 750 * 100vw);
+        }
+        /* タイトルのスタイル */
+        .text_list_title {
+            font-size: calc(12 / 750 * 100vw);
+            font-weight: bold;
+            margin-bottom: calc(3 / 750 * 100vw);
+        }
+
+        /* 情報のスタイル */
+        .text_list_info {
+            font-size: calc(10 / 750 * 100vw);
+        }
+
+        .text_list_info.button {
+            color: #cdbea7;
+            padding:calc(6 / 750 * 100vw) 0;
+            font-size: calc(12 / 750 * 100vw);
+            text-align: center;
+        }
+
+        footer{
+            padding: calc(8 / 750 * 100vw);
+            text-align: center;
+            background-color: #323030;
+            color: #cdbea7;
+        }
+
+
+
+        .yellow{
+            background-color: #C29545;
+        }
+        .red{
+            background-color: #882426;
+        }
