@@ -13,7 +13,6 @@
         /*FVを作ろう*/
         .top{
             position:relative;
-            height:100vh;
             margin:0 auto;
             text-align: center;
         }
@@ -88,28 +87,53 @@
         
 
         @media screen and (max-width:750px) {
+            .top{
+                height:calc(430 / 750 * 100vw);
+            }
             .item{
-                width:90%;
                 margin:0 auto calc(20 / 750 * 100vw);
                 padding-top: calc(50 / 750 * 100vw);    
             }
             .text_list_item{
                 margin-bottom: calc(10 / 750 * 100vw);    
             }
+            .item_title{
+                font-size: min(24 / 750 * 100vw);
+            }    
             .item_parent{
                 width: 80%;
                 margin:0 auto calc(20 / 750 * 100vw);
+                padding: calc(10 / 750 * 100vw) 0;
             }
+            
             .item_photo{
+                display: flex;
                 margin: 0 auto calc(20 / 750 * 100vw);
             }
             .item_photo img{
-                object-fit: contain;
-                width:calc(350 / 750 * 100vw);
-            }        
+                display: flex;
+                align-items: center;
+                width:80%;
+                margin: 0 auto;
+            }
+            .text_list_title {
+                font-size: calc(18 / 750 * 100vw);
+            }
+            .text_list_info {
+                font-size: calc(16 / 750 * 100vw);
+            }
+            .text_list_info.button {
+                font-size: calc(16 / 750 * 100vw);
+            }
+            footer{
+                font-size: calc(16 / 750 * 100vw);
+            }                        
         }
 
         @media screen and (min-width:751px) {
+            .top{
+                height:100vh;
+            }
             .item{
                 display: flex;
                 gap:10%;
@@ -120,11 +144,14 @@
             .item_parent{
                 width: 70%;
                 margin:0 auto calc(30 / 750 * 100vw);
-
+                padding: calc(10 / 750 * 100vw);
             }    
             .text_list_item{
                 margin-bottom: calc(5 / 750 * 100vw);
             }
+            .item_title{
+                font-size: calc(18 / 750 * 100vw);
+            }    
             .item_photo{
                 margin: 0 auto calc(10 / 750 * 100vw);
             }  
@@ -132,13 +159,25 @@
                 object-fit: contain;
                 width:calc(170 / 750 * 100vw);
                 height: calc(100 / 750 * 100vw);
-            }          
+            }
+            .text_list_title {
+                font-size: calc(12 / 750 * 100vw);
+            }
+            .text_list_info {
+                font-size: calc(10 / 750 * 100vw);
+            } 
+            .text_list_info.button {
+                font-size: calc(12 / 750 * 100vw);
+            }
+            footer{
+                font-size: calc(16 / 750 * 100vw);
+            }                        
+                     
         }
 
         .item_parent{
             position: relative;
             margin:0 auto calc(20 / 750 * 100vw);
-            padding: calc(10 / 750 * 100vw);
             background-color: #C29545;
             border-radius: calc(12 / 750 * 100vw);
         }
@@ -173,7 +212,6 @@
         }
         .item_title{
             text-align: center;
-            font-size: calc(18 / 750 * 100vw);
             font-weight: bold;
             padding-top:calc(8 / 750 * 100vw);
             padding-bottom:calc(8 / 750 * 100vw);
@@ -196,20 +234,15 @@
         }
         /* タイトルのスタイル */
         .text_list_title {
-            font-size: calc(12 / 750 * 100vw);
             font-weight: bold;
             margin-bottom: calc(3 / 750 * 100vw);
         }
 
-        /* 情報のスタイル */
-        .text_list_info {
-            font-size: calc(10 / 750 * 100vw);
-        }
+
 
         .text_list_info.button {
             color: #cdbea7;
             padding:calc(6 / 750 * 100vw) 0;
-            font-size: calc(12 / 750 * 100vw);
             text-align: center;
         }
 
